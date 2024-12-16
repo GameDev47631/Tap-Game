@@ -10,4 +10,4 @@ This is simply a small 2-Dimensional game based off of A. E. Colonna's "Code Gam
 - https://opengameart.org/
 
 ## Example
-![Tap Game](https://github.com/user-attachments/assets/5097373d-cf76-4991-9858-63727cae87e3)
+![Tap Game](https://github.com/user-attachments/assets/8d4dc69a-e905-455c-8dd8-25c6f0afd12e)
