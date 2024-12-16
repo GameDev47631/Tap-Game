@@ -52,6 +52,6 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Bat-Tap-Game.sln",
+    "dotnet.defaultSolution": "Bat Tap Game.sln",
     "git.ignoreLimitWarning": true
 }
