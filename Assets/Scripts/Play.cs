@@ -24,6 +24,6 @@ public class Play : MonoBehaviour {
 
     public void PlayGameScene() {
         // "Check any scripts with 'Bat' or 'Sound' in the name."
-        SceneManager.LoadScene("TapGame");
+        SceneManager.LoadScene("Gameplay");
     }
 }

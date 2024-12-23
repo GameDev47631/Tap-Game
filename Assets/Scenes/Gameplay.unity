@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 261258700}
   - component: {fileID: 261258699}
   m_Layer: 5
-  m_Name: Time
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,7 +1130,7 @@ Transform:
   m_GameObject: {fileID: 538150069}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.180645, y: -0.7133591, z: -11.9044895}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 261258699}
-  currentTime: 60
+  currentTime: 61
   countDown: 1
   hasLimit: 1
   timerLimit: 0
@@ -2470,10 +2470,11 @@ MonoBehaviour:
   gameObjects: []
   BatSounds: []
   scoreText: {fileID: 2093164127}
-  totalScore: 0
-  isPaused: 0
   darkScreen: {fileID: 2132175393}
   frame: {fileID: 1071665166}
+  timer: {fileID: 0}
+  totalScore: 0
+  isPaused: 0
 --- !u!81 &1883771311
 AudioListener:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class SpawnBat : MonoBehaviour {
             gameObjects = GameObject.FindGameObjectsWithTag("Bat");
 
             foreach (GameObject Bat in gameObjects) {
-                GameObject.Destroy(Bat);                
+                Destroy(Bat);                
             }
         }
     }
@@ -69,12 +69,19 @@ public class SpawnBat : MonoBehaviour {
         isPaused = 1;
         darkScreen.SetActive(true);
         frame.SetActive(true);
+
+        // "This will pause the in-game timer."
+        Time.timeScale = 0;
     }
 
     public void ResumeGame() {
         isPaused = 0;
         darkScreen.SetActive(false);
         frame.SetActive(false);
+        
+        // "This will unpause it."
+        Time.timeScale = 1;
+
         StartCoroutine(SpawningBat());
     }
 
