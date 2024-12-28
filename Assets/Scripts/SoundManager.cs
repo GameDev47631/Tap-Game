@@ -39,7 +39,7 @@ public class SoundManager : MonoBehaviour {
 
         // "Different sound effects play even for the 'same' GameObject/Prefab."
         Effects.clip = DeathSound[Random.Range(0, DeathSound.Length)];
-        // "Sound effects clip over each other."
+        // "Sound effects will clip over each other."
         Effects.PlayOneShot(Effects.clip, 0.7F);
     }
 

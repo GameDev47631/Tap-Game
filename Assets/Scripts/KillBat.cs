@@ -7,7 +7,7 @@ public class KillBat : MonoBehaviour {
     [SerializeField] GameObject DeathEffect;
     [SerializeField] GameObject GroundEffect;
 
-    int totalScore, soundIndex;
+    public int totalScore, soundIndex;
 
     SoundManager soundManager;
 
@@ -31,7 +31,7 @@ public class KillBat : MonoBehaviour {
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();
 
-        Debug.Log("Score: " + totalScore.ToString());
+        Debug.Log("Score: " + totalScore);
 
         Destroy(gameObject);
         // "Click the bat(s) to see the effects."

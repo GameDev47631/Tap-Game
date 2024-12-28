@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,8 +10,7 @@ public class SpawnBat : MonoBehaviour {
     
     // "Create empty GameObjects to turn them into Prefabs."
     [SerializeField] GameObject[] BatPrefab, gameObjects;
-    [SerializeField] AudioClip[] BatSounds;
-    [SerializeField] Text scoreText;
+    [SerializeField] TextMeshProUGUI scoreText;
     public int totalScore, isPaused;
     
     // "A pause button is required to see these."
@@ -26,8 +26,7 @@ public class SpawnBat : MonoBehaviour {
     void Update() {
         // "Score increments by 1 after every click; 'totalscore++'."
         totalScore = PlayerPrefs.GetInt("Score", 0);
-
-        scoreText.text = "Score: " + totalScore.ToString();
+        scoreText.text = "Caught: " + totalScore.ToString();
 
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();

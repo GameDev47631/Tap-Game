@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        // Reset score when the scene is loaded
+        // "Reset score when the scene is loaded."
         PlayerPrefs.SetInt("Score", 0);
         PlayerPrefs.Save();
     }
