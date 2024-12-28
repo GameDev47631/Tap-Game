@@ -10,7 +10,9 @@ public class SpawnBat : MonoBehaviour {
     
     // "Create empty GameObjects to turn them into Prefabs."
     [SerializeField] GameObject[] BatPrefab, gameObjects;
-    [SerializeField] TextMeshProUGUI scoreText;
+    
+    // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
+    [SerializeField] protected TextMeshProUGUI scoreText;
     public int totalScore, isPaused;
     
     // "A pause button is required to see these."

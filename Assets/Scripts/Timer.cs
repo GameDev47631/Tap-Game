@@ -4,8 +4,9 @@ using System.Linq.Expressions;
 using TMPro; // https://www.youtube.com/watch?v=u_n3NEi223E
 using UnityEditor.Timeline;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour {
+public class Timer : SpawnBat {
     [Header("Component")]
     public TextMeshProUGUI timerText;
 
@@ -40,6 +41,9 @@ public class Timer : MonoBehaviour {
             currentTime = timerLimit;
             timerText.color = Color.red;
             enabled = false;
+
+            SceneManager.LoadScene("GameOver");
+            scoreText.text = "Your Score: " + totalScore.ToString();
         }
         
         SetTimerText();

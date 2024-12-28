@@ -1008,6 +1008,7 @@ GameObject:
   - component: {fileID: 1246533126}
   - component: {fileID: 1246533125}
   - component: {fileID: 1246533124}
+  - component: {fileID: 1246533127}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1089,6 +1090,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1246533127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246533123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BatPrefab: []
+  gameObjects: []
+  scoreText: {fileID: 1250635670}
+  totalScore: 0
+  isPaused: 0
+  darkScreen: {fileID: 0}
+  frame: {fileID: 0}
 --- !u!1 &1250635668
 GameObject:
   m_ObjectHideFlags: 0
