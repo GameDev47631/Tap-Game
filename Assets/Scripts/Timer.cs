@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq.Expressions;
 using TMPro; // https://www.youtube.com/watch?v=u_n3NEi223E
-using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -35,18 +31,16 @@ public class Timer : SpawnBat {
         // "Time will either decrement every second under '-=', or increment under '+='."
         currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
         
+        SetTimerText();
+
         // "Are you below or above the limit? (read from left to right)"
         if (hasLimit && ((countDown && currentTime <= timerLimit) || (!countDown && currentTime >= timerLimit))) {
-            // "This also acts as a stopwatch."
+            // "This can also act as a stopwatch."
             currentTime = timerLimit;
             timerText.color = Color.red;
-            enabled = false;
 
             SceneManager.LoadScene("GameOver");
-            scoreText.text = "Your Score: " + totalScore.ToString();
-        }
-        
-        SetTimerText();
+        } 
     }
 
     private void SetTimerText() {
@@ -58,7 +52,6 @@ public class Timer : SpawnBat {
         int seconds = Mathf.FloorToInt(currentTime % 60);
         int centiseconds = Mathf.FloorToInt(currentTime % 1 * 100);
         timerText.text = $"{minutes:00}:{seconds:00}:{centiseconds:00}";
-        
     }
 }
 

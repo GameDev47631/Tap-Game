@@ -1,10 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SpawnBat : MonoBehaviour {
     
@@ -16,7 +13,7 @@ public class SpawnBat : MonoBehaviour {
     public int totalScore, isPaused;
     
     // "A pause button is required to see these."
-    [SerializeField] GameObject darkScreen, frame;
+    public GameObject darkScreen, frame;
 
     // Start is called before the first frame update
     void Start() {
@@ -28,7 +25,9 @@ public class SpawnBat : MonoBehaviour {
     void Update() {
         // "Score increments by 1 after every click; 'totalscore++'."
         totalScore = PlayerPrefs.GetInt("Score", 0);
-        scoreText.text = "Caught: " + totalScore.ToString();
+        
+        // "More inforation down below."
+        UpdateScoreText();
 
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();
@@ -42,7 +41,7 @@ public class SpawnBat : MonoBehaviour {
         }
     }
 
-    IEnumerator SpawningBat() {
+    protected IEnumerator SpawningBat() {
         while (isPaused == 0) {
             yield return new WaitForSeconds(1f);
             /* https://blog.sentry.io/unity-tutorial-developing-your-first-unity-game-part-2/
@@ -86,8 +85,18 @@ public class SpawnBat : MonoBehaviour {
         StartCoroutine(SpawningBat());
     }
 
+    private void UpdateScoreText() {
+        if (SceneManager.GetActiveScene().name == "GameOver") {
+            // "The score text will change in the Game Over screen."
+            scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
+        } else {
+            // "This is the default score text for in-game."
+            scoreText.text = "Caught: " + totalScore.ToString();
+        }
+    }
+
     public void MenuScene() {
-        // "'Play' script for more."
+        // "Check the 'Play' script for more."
         SceneManager.LoadScene("MainMenu");
     }
 }
