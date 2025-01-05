@@ -196,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathEffect: {fileID: 5985634496115995773, guid: 463cf9f7af4680240898f6aeba3fe3e6, type: 3}
   GroundEffect: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  totalScore: 0
+  soundIndex: 0
 --- !u!82 &-2707340869466765786
 AudioSource:
   m_ObjectHideFlags: 0

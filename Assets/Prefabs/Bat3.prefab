@@ -118,7 +118,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352626851056742821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathEffect: {fileID: 2883797502249945402, guid: 1e54877675f6e4a46ad7ca7c4d7a5bf6, type: 3}
   GroundEffect: {fileID: 3187647067869052980, guid: ab8802a00020db74c81635f3c5db9bcf, type: 3}
+  totalScore: 0
+  soundIndex: 0
 --- !u!82 &-1867262419590195937
 AudioSource:
   m_ObjectHideFlags: 0

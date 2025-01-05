@@ -516,7 +516,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score: 0'
+  m_text: 'Caught: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4f8dd1f570485c94b96ba76bcfa307df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00244827145684047aa39a66f303e288, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   darkScreen: {fileID: 0}
   frame: {fileID: 0}
   timerText: {fileID: 261258699}
-  currentTime: 4
+  currentTime: 61
   countDown: 1
   hasLimit: 1
   timerLimit: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SpawnBat : MonoBehaviour {
-    
     // "Create empty GameObjects to turn them into Prefabs."
     [SerializeField] GameObject[] BatPrefab, gameObjects;
     
@@ -15,9 +14,11 @@ public class SpawnBat : MonoBehaviour {
     // "A pause button is required to see these."
     public GameObject darkScreen, frame;
 
+    private Coroutine spawner;
+
     // Start is called before the first frame update
     void Start() {
-        StartCoroutine(SpawningBat());
+        spawner = StartCoroutine(SpawningBat());
         isPaused = 0;
     }
 
@@ -61,7 +62,7 @@ public class SpawnBat : MonoBehaviour {
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject gameObject = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
-            Destroy(gameObject, 5f);
+            Destroy(gameObject, 4f);
         }
     }
 
@@ -70,8 +71,13 @@ public class SpawnBat : MonoBehaviour {
         darkScreen.SetActive(true);
         frame.SetActive(true);
 
-        // "This will pause the in-game timer."
+        // "This will pause the entire game."
         Time.timeScale = 0;
+
+        if (spawner != null) {
+            StopCoroutine(spawner);
+            spawner = null;
+        }
     }
 
     public void ResumeGame() {
@@ -82,12 +88,14 @@ public class SpawnBat : MonoBehaviour {
         // "This will unpause it."
         Time.timeScale = 1;
 
-        StartCoroutine(SpawningBat());
+        if (spawner == null ) {
+            spawner = StartCoroutine(SpawningBat());
+        }
     }
 
     private void UpdateScoreText() {
         if (SceneManager.GetActiveScene().name == "GameOver") {
-            // "The score text will change in the Game Over screen."
+            // "The score text will change in the 'GameOver' screen."
             scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
