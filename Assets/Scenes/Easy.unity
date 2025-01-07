@@ -1289,6 +1289,7 @@ MonoBehaviour:
   isPaused: 0
   darkScreen: {fileID: 0}
   frame: {fileID: 0}
+  movement: 1
   timerText: {fileID: 261258699}
   currentTime: 61
   countDown: 1
@@ -2612,6 +2613,7 @@ MonoBehaviour:
   isPaused: 0
   darkScreen: {fileID: 2132175393}
   frame: {fileID: 1071665166}
+  movement: 1
 --- !u!81 &1883771311
 AudioListener:
   m_ObjectHideFlags: 0
