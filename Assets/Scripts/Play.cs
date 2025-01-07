@@ -17,13 +17,44 @@ public class Play : MonoBehaviour {
         
     }
 
+    public void OnMouseDown() {
+        // Play animation when the object is clicked
+        startAnim();
+
+        // Decide what to do based on the name or tag of the clicked object
+        switch (gameObject.name) {
+            case "PlayGameImage":
+                PlayGameScene();
+                break;
+
+            case "EasyMode":
+                SceneManager.LoadScene("Easy");
+                break;
+
+            case "MediumMode":
+                SceneManager.LoadScene("Medium");
+                break;
+
+            case "HardMode":
+                SceneManager.LoadScene("Hard");
+                break;
+
+            default:
+                Debug.LogWarning("Unrecognized image clicked!");
+                break;
+        }
+    }
+
     public void startAnim() {
         // "GameObjects/Prefabs are always animated."
         anim.SetTrigger("Active");
     }
 
     public void PlayGameScene() {
-        // "Check any scripts with 'Bat' or 'Sound' in the name."
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("SelectionScreen");
+    }
+
+    public void PracticeScene() {
+        SceneManager.LoadScene("Practice");
     }
 }

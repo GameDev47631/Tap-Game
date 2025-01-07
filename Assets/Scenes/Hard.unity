@@ -989,7 +989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 00244827145684047aa39a66f303e288, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aed29419faaad8b48913f5248cf8ed1a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2605,9 +2605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BatPrefab:
-  - {fileID: 766885859834459676, guid: be2e02c3ff7828846b69c5cd2bea56a3, type: 3}
   - {fileID: 5283665886305136601, guid: 1b978126da873594b927285799203964, type: 3}
-  - {fileID: 352626851056742821, guid: 2eecc3cb6d5805c4183e2e33cb6a220a, type: 3}
   gameObjects: []
   scoreText: {fileID: 292986155}
   totalScore: 0
