@@ -16,8 +16,6 @@ public class SpawnBat : MonoBehaviour {
 
     private Coroutine spawner;
 
-    public bool movement = true;
-
     // Start is called before the first frame update
     void Start() {
         spawner = StartCoroutine(SpawningBat());
@@ -66,7 +64,16 @@ public class SpawnBat : MonoBehaviour {
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
 
-            //
+            Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
+            if (newBatCollider != null) {
+                GameObject[] existingBats = GameObject.FindGameObjectsWithTag("Bat");
+                foreach (GameObject existingBat in existingBats) {
+                    Collider2D existingCollider = existingBat.GetComponent<Collider2D>();
+                    if (existingCollider != null) {
+                        Physics2D.IgnoreCollision(newBatCollider, existingCollider);
+                    }
+                }
+            }
 
             Destroy(newBat, 4f);
         }

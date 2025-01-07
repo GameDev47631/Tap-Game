@@ -8,25 +8,19 @@ public class HorizontalSpawnBat : MonoBehaviour {
     [SerializeField] GameObject[] BatPrefabA, BatPrefabB, gameObjects;
     [SerializeField] protected TextMeshProUGUI scoreText;
     public int totalScore, isPaused;
-    public GameObject darkScreen, frame;
     private Coroutine hSpawner1, hSpawner2;
-    public Collider otherCollider;
-    private float speed = 9f;
 
     // Start is called before the first frame update
     void Start() {
         hSpawner1 = StartCoroutine(LeftFacingBat());
         hSpawner2 = StartCoroutine(RightFacingBat());
 
-        Collider myCollider = GetComponent<Collider>();
-        Physics.IgnoreCollision(myCollider, otherCollider, true);
-
         isPaused = 0;
     }
 
     // Update is called once per frame
     void Update() {
-        // "Score increments by 1 after every click; 'totalscore++'."
+        // "Score still increments in regards to Unity, not the 'SpawnBat' script."
         totalScore = PlayerPrefs.GetInt("Score", 0);
 
         PlayerPrefs.SetInt("Score", totalScore);
@@ -48,13 +42,24 @@ public class HorizontalSpawnBat : MonoBehaviour {
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
-            GameObject gameObject = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
+            GameObject newBat = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
 
             // Apply movement to the bat using Rigidbody2D.
-            Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
+            Rigidbody2D rigidbody = newBat.GetComponent<Rigidbody2D>();
             if (rigidbody != null) {
                 Vector2 direction = Vector2.left;
-                rigidbody.velocity = direction * 9f; // Adjust speed as needed.
+                rigidbody.velocity = direction * 9f;
+            }
+
+            Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
+            if (newBatCollider != null) {
+                GameObject[] existingBats = GameObject.FindGameObjectsWithTag("Bat");
+                foreach (GameObject existingBat in existingBats) {
+                    Collider2D existingCollider = existingBat.GetComponent<Collider2D>();
+                    if (existingCollider != null) {
+                        Physics2D.IgnoreCollision(newBatCollider, existingCollider);
+                    }
+                }
             }
 
             Destroy(gameObject, 4f);
@@ -63,18 +68,29 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator RightFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(6.75f);
+            yield return new WaitForSeconds(5f);
 
-            var horizontal = Random.Range(-30, 30);
-            var vertical = Random.Range(0, 20);
+            var horizontal = Random.Range(-20, 20);
+            var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
-            GameObject gameObject = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
+            GameObject newBat = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
 
             // Apply movement to the bat using Rigidbody2D.
-            Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
+            Rigidbody2D rigidbody = newBat.GetComponent<Rigidbody2D>();
             if (rigidbody != null) {
                 Vector2 direction = Vector2.right;
-                rigidbody.velocity = direction * speed;
+                rigidbody.velocity = direction * 9f;
+            }
+
+            Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
+            if (newBatCollider != null) {
+                GameObject[] existingBats = GameObject.FindGameObjectsWithTag("Bat");
+                foreach (GameObject existingBat in existingBats) {
+                    Collider2D existingCollider = existingBat.GetComponent<Collider2D>();
+                    if (existingCollider != null) {
+                        Physics2D.IgnoreCollision(newBatCollider, existingCollider);
+                    }
+                }
             }
 
             Destroy(gameObject, 4f);
@@ -83,8 +99,6 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     public void PauseGame() {
         isPaused = 1;
-        darkScreen.SetActive(true);
-        frame.SetActive(true);
 
         // "This will pause the entire game."
         Time.timeScale = 0;
@@ -99,8 +113,6 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     public void ResumeGame() {
         isPaused = 0;
-        darkScreen.SetActive(false);
-        frame.SetActive(false);
         
         // "This will unpause it."
         Time.timeScale = 1;

@@ -1289,7 +1289,6 @@ MonoBehaviour:
   isPaused: 0
   darkScreen: {fileID: 0}
   frame: {fileID: 0}
-  movement: 1
   timerText: {fileID: 261258699}
   currentTime: 61
   countDown: 1
@@ -1377,7 +1376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: -639.6, y: -241.6213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071665168
@@ -2520,7 +2519,7 @@ GameObject:
   - component: {fileID: 1883771308}
   - component: {fileID: 1883771310}
   - component: {fileID: 1883771312}
-  - component: {fileID: 1883771311}
+  - component: {fileID: 1883771313}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2614,15 +2613,6 @@ MonoBehaviour:
   isPaused: 0
   darkScreen: {fileID: 2132175393}
   frame: {fileID: 1071665166}
-  movement: 1
---- !u!81 &1883771311
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1883771306}
-  m_Enabled: 1
 --- !u!114 &1883771312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,8 +2633,14 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   totalScore: 0
   isPaused: 0
-  darkScreen: {fileID: 0}
-  frame: {fileID: 0}
+--- !u!81 &1883771313
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883771306}
+  m_Enabled: 1
 --- !u!1 &1931712676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,7 +2809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 20.400024, y: 18.378693}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132175395
