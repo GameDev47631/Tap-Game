@@ -1282,13 +1282,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cac980dccf638f4399cf97dc7c51fe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatPrefab: []
+  BatPrefab1: []
+  BatPrefab2A: []
+  BatPrefab2B: []
   gameObjects: []
   scoreText: {fileID: 292986155}
   totalScore: 0
   isPaused: 0
   darkScreen: {fileID: 0}
   frame: {fileID: 0}
+  movement: 1
   timerText: {fileID: 261258699}
   currentTime: 61
   countDown: 1
@@ -2604,14 +2607,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatPrefab:
+  BatPrefab1:
   - {fileID: 5283665886305136601, guid: 1b978126da873594b927285799203964, type: 3}
+  BatPrefab2A:
+  - {fileID: 5283665886305136601, guid: fed64fb9d3e2d5c47bae522cb9a1683b, type: 3}
+  BatPrefab2B:
+  - {fileID: 5283665886305136601, guid: c3ed93a7604a25448b7b2757d87f4510, type: 3}
   gameObjects: []
   scoreText: {fileID: 292986155}
   totalScore: 0
   isPaused: 0
   darkScreen: {fileID: 2132175393}
   frame: {fileID: 1071665166}
+  movement: 1
 --- !u!81 &1883771311
 AudioListener:
   m_ObjectHideFlags: 0

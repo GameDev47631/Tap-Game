@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,16 +16,11 @@ public class Play : MonoBehaviour {
     }
 
     public void OnMouseDown() {
-        // Play animation when the object is clicked
-        startAnim();
-
-        // Decide what to do based on the name or tag of the clicked object
+        // "Classic Easy/Medium/Hard scenario."
         switch (gameObject.name) {
-            case "PlayGameImage":
-                PlayGameScene();
-                break;
-
+            // "Check the Image name (and text)."
             case "EasyMode":
+                // "Find the Unity scene with this EXACT name."
                 SceneManager.LoadScene("Easy");
                 break;
 
@@ -45,7 +38,7 @@ public class Play : MonoBehaviour {
         }
     }
 
-    public void startAnim() {
+    public void StartAnim() {
         // "GameObjects/Prefabs are always animated."
         anim.SetTrigger("Active");
     }

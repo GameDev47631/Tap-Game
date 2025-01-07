@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SpawnBat : MonoBehaviour {
-    // "Create empty GameObjects to turn them into Prefabs."
-    [SerializeField] GameObject[] BatPrefab, gameObjects;
+    // "Create empty GameObjects for Prefabs."
+    [SerializeField] GameObject[] BatPrefab1, BatPrefab2A, BatPrefab2B, gameObjects;
     
     // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
@@ -14,11 +14,16 @@ public class SpawnBat : MonoBehaviour {
     // "A pause button is required to see these."
     public GameObject darkScreen, frame;
 
-    private Coroutine spawner;
+    private Coroutine vSpawner, hSpawner1, hSpawner2;
+
+    public bool movement = true;
 
     // Start is called before the first frame update
     void Start() {
-        spawner = StartCoroutine(SpawningBat());
+        vSpawner = StartCoroutine(VerticalSpawningBat());
+        hSpawner1 = StartCoroutine(LeftFacingBat());
+        hSpawner2 = StartCoroutine(RightFacingBat());
+
         isPaused = 0;
     }
 
@@ -42,7 +47,7 @@ public class SpawnBat : MonoBehaviour {
         }
     }
 
-    protected IEnumerator SpawningBat() {
+    IEnumerator VerticalSpawningBat() {
         while (isPaused == 0) {
             yield return new WaitForSeconds(1f);
             /* https://blog.sentry.io/unity-tutorial-developing-your-first-unity-game-part-2/
@@ -61,7 +66,47 @@ public class SpawnBat : MonoBehaviour {
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
-            GameObject gameObject = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
+            GameObject gameObject = Instantiate(BatPrefab1[Random.Range(0, BatPrefab1.Length)], spawnPosition, Quaternion.identity);
+            Destroy(gameObject, 4f);
+        }
+    }
+
+    IEnumerator LeftFacingBat() {
+        while (isPaused == 0) {
+            yield return new WaitForSeconds(2.75f);
+
+            var horizontal = Random.Range(-20, 20);
+            var vertical = Random.Range(0, 10);
+            var spawnPosition = new Vector2(horizontal, vertical);
+            GameObject gameObject = Instantiate(BatPrefab2A[Random.Range(0, BatPrefab2A.Length)], spawnPosition, Quaternion.identity);
+
+            // Apply movement to the bat using Rigidbody2D.
+            Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
+            if (rigidbody != null) {
+                Vector2 direction = Vector2.left;
+                rigidbody.velocity = direction * 9f; // Adjust speed as needed.
+            }
+
+            Destroy(gameObject, 4f);
+        }
+    }
+
+    IEnumerator RightFacingBat() {
+        while (isPaused == 0) {
+            yield return new WaitForSeconds(6.75f);
+
+            var horizontal = Random.Range(-20, 20);
+            var vertical = Random.Range(0, 10);
+            var spawnPosition = new Vector2(horizontal, vertical);
+            GameObject gameObject = Instantiate(BatPrefab2B[Random.Range(0, BatPrefab2B.Length)], spawnPosition, Quaternion.identity);
+
+            // Apply movement to the bat using Rigidbody2D.
+            Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
+            if (rigidbody != null) {
+                Vector2 direction = Vector2.right;
+                rigidbody.velocity = direction * 9f; // Adjust speed as needed.
+            }
+
             Destroy(gameObject, 4f);
         }
     }
@@ -74,9 +119,14 @@ public class SpawnBat : MonoBehaviour {
         // "This will pause the entire game."
         Time.timeScale = 0;
 
-        if (spawner != null) {
-            StopCoroutine(spawner);
-            spawner = null;
+        if (vSpawner != null || (hSpawner1 != null && hSpawner2 != null)) {
+            StopCoroutine(vSpawner);
+            vSpawner = null;
+
+            StopCoroutine(hSpawner1);
+            StopCoroutine(hSpawner2);
+            hSpawner1 = null;
+            hSpawner2 = null;
         }
     }
 
@@ -88,8 +138,10 @@ public class SpawnBat : MonoBehaviour {
         // "This will unpause it."
         Time.timeScale = 1;
 
-        if (spawner == null ) {
-            spawner = StartCoroutine(SpawningBat());
+        if (vSpawner == null || hSpawner1 == null) {
+            vSpawner = StartCoroutine(VerticalSpawningBat());
+            hSpawner1 = StartCoroutine(LeftFacingBat());
+            hSpawner2 = StartCoroutine(RightFacingBat());
         }
     }
 
