@@ -37,10 +37,10 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator LeftFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(Random.Range(7f, 10f));
 
             var horizontal = Random.Range(-20, 20);
-            var vertical = Random.Range(0, 10);
+            var vertical = Random.Range(-20, 20);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
 
@@ -62,20 +62,20 @@ public class HorizontalSpawnBat : MonoBehaviour {
                 }
             }
 
-            Destroy(gameObject, 4f);
+            Destroy(newBat, 4f);
         }
     }
 
     IEnumerator RightFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(Random.Range(7f, 10f));
 
             var horizontal = Random.Range(-20, 20);
-            var vertical = Random.Range(0, 10);
+            var vertical = Random.Range(-20, 20);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
 
-            // Apply movement to the bat using Rigidbody2D.
+            // "This is meant for the horizontal prefabs only."
             Rigidbody2D rigidbody = newBat.GetComponent<Rigidbody2D>();
             if (rigidbody != null) {
                 Vector2 direction = Vector2.right;
@@ -93,7 +93,7 @@ public class HorizontalSpawnBat : MonoBehaviour {
                 }
             }
 
-            Destroy(gameObject, 4f);
+            Destroy(newBat, 4f);
         }
     }
 

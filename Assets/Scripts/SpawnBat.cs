@@ -64,6 +64,7 @@ public class SpawnBat : MonoBehaviour {
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
 
+            // "This will prevent collision between the prefabs themselves."
             Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
             if (newBatCollider != null) {
                 GameObject[] existingBats = GameObject.FindGameObjectsWithTag("Bat");
