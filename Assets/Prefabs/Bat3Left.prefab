@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3467666816935584719}
   - component: {fileID: -2707340869466765786}
   m_Layer: 0
-  m_Name: Bat2Right
+  m_Name: Bat3Left
   m_TagString: Bat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 805955064, guid: 06e4d8947c7a3614aa8e53b57ff6bca9, type: 3}
+  m_Sprite: {fileID: -322024336, guid: 06e4d8947c7a3614aa8e53b57ff6bca9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 5283665886305136601}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d8ab15db353ead4eb59ab156e436c72, type: 2}
+  m_Controller: {fileID: 9100000, guid: cf424e7aedd791a46bdb8ac50186dc36, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

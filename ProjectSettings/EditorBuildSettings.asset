@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectionScreen.unity
     guid: f9f7aa07afac2404cb2d511fdf6f9ca2
   - enabled: 1
-    path: Assets/Scenes/Hard.unity
-    guid: eaf90c02f9aa5784085408046037ce32
-  - enabled: 1
     path: Assets/Scenes/Easy.unity
     guid: e1cfdc40ca8ccde41916b397ee6bda4e
   - enabled: 1
     path: Assets/Scenes/Medium.unity
     guid: 10b73174967e638478c3bfc4bbdb4735
+  - enabled: 1
+    path: Assets/Scenes/Hard.unity
+    guid: eaf90c02f9aa5784085408046037ce32
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 3c95d937d375b0144887ac79663757b7

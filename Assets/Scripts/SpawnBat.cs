@@ -45,7 +45,7 @@ public class SpawnBat : MonoBehaviour {
 
     IEnumerator SpawningBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(Random.Range(0.5f, 2f));
             /* https://blog.sentry.io/unity-tutorial-developing-your-first-unity-game-part-2/
             "I could not work this code out."
             float posY = Random.Range

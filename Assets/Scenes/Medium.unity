@@ -2441,6 +2441,7 @@ GameObject:
   - component: {fileID: 1883771309}
   - component: {fileID: 1883771308}
   - component: {fileID: 1883771310}
+  - component: {fileID: 1883771312}
   - component: {fileID: 1883771311}
   m_Layer: 0
   m_Name: Main Camera
@@ -2529,6 +2530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BatPrefab:
   - {fileID: 352626851056742821, guid: 2eecc3cb6d5805c4183e2e33cb6a220a, type: 3}
+  - {fileID: 766885859834459676, guid: be2e02c3ff7828846b69c5cd2bea56a3, type: 3}
   gameObjects: []
   scoreText: {fileID: 292986155}
   totalScore: 0
@@ -2543,6 +2545,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883771306}
   m_Enabled: 1
+--- !u!114 &1883771312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883771306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BatPrefab:
+  - {fileID: 766885859834459676, guid: be2e02c3ff7828846b69c5cd2bea56a3, type: 3}
+  gameObjects: []
+  scoreText: {fileID: 0}
+  totalScore: 0
+  isPaused: 0
+  darkScreen: {fileID: 2132175393}
+  frame: {fileID: 1071665166}
 --- !u!1 &1931712676
 GameObject:
   m_ObjectHideFlags: 0
