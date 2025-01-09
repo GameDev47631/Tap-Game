@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play : MonoBehaviour {
+public class Buttons : MonoBehaviour {
     private Animator anim;
 
     // Start is called before the first frame update
@@ -32,6 +32,23 @@ public class Play : MonoBehaviour {
                 SceneManager.LoadScene("Hard");
                 break;
 
+            // "There are buttons that will give away which scene you go to."
+            case "HomeButton":
+                SceneManager.LoadScene("MainMenu");
+                break;
+                
+            case "PlayButton":
+                SceneManager.LoadScene("SelectionScreen");
+                break;
+            
+            case "PracticeButton":
+                SceneManager.LoadScene("Practice");
+                break;
+            
+            case "CreditsButton":
+                SceneManager.LoadScene("Credits");
+                break;
+
             default:
                 Debug.LogWarning("Unrecognized image clicked!");
                 break;
@@ -41,13 +58,5 @@ public class Play : MonoBehaviour {
     public void StartAnim() {
         // "GameObjects/Prefabs are always animated."
         anim.SetTrigger("Active");
-    }
-
-    public void PlayGameScene() {
-        SceneManager.LoadScene("SelectionScreen");
-    }
-
-    public void PracticeScene() {
-        SceneManager.LoadScene("Practice");
     }
 }

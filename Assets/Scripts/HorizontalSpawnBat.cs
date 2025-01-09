@@ -37,7 +37,7 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator LeftFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(Random.Range(7f, 10f));
+            yield return new WaitForSeconds(Random.Range(5f, 7.5f));
 
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(-20, 20);
@@ -68,7 +68,7 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator RightFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(Random.Range(7f, 10f));
+            yield return new WaitForSeconds(Random.Range(5f, 7.5f));
 
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(-20, 20);
