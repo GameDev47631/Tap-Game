@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1883771310}
         m_TargetAssemblyTypeName: SpawnBat, Assembly-CSharp
         m_MethodName: MenuScene
         m_Mode: 1
@@ -2219,7 +2219,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1883771310}
         m_TargetAssemblyTypeName: SpawnBat, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 331012264}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: ToggleSound
         m_Mode: 1

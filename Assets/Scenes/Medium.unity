@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1883771310}
         m_TargetAssemblyTypeName: SpawnBat, Assembly-CSharp
         m_MethodName: MenuScene
         m_Mode: 1
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1883771310}
         m_TargetAssemblyTypeName: SpawnBat, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -2253,7 +2253,7 @@ MonoBehaviour:
   totalScore: 0
   isPaused: 0
   darkScreen: {fileID: 2132175393}
-  frame: {fileID: 0}
+  frame: {fileID: 1079725231}
 --- !u!81 &1883771311
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   BatPrefab:
   - {fileID: 352626851056742821, guid: 2eecc3cb6d5805c4183e2e33cb6a220a, type: 3}
   gameObjects: []
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 292986155}
   totalScore: 0
   isPaused: 0
   darkScreen: {fileID: 2132175393}

@@ -113,7 +113,7 @@ public class SpawnBat : MonoBehaviour {
             scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
-            scoreText.text = "Caught: " + totalScore.ToString();
+            scoreText.text = "Score: " + totalScore.ToString();
         }
     }
 
