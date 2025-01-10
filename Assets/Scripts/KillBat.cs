@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class KillBat : MonoBehaviour {
     [SerializeField] GameObject DeathEffect;
