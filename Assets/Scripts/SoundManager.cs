@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +5,7 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] AudioSource Music, Effects;
     
     // "Array for more than one sound effect."
-    public AudioClip[] DeathSound;
-    public AudioClip[] GroundSound;
+    public AudioClip[] DeathSound, GroundSound;
     int isSound;
     public Sprite soundOnImage, soundOffImage;
     public Button SoundButton;
@@ -17,7 +14,7 @@ public class SoundManager : MonoBehaviour {
     void Start() {
         isSound = PlayerPrefs.GetInt("Sound", 1);
 
-        // "Sound on by default; 'ToggleSound()' on line #56."
+        // "Sound on by default; check the 'ToggleSound()' method down below."
         if (isSound == 1) {
             SoundButton.GetComponent<Image>().sprite = soundOnImage;
         } else {
@@ -40,12 +37,12 @@ public class SoundManager : MonoBehaviour {
         // "Different sound effects play even for the 'same' GameObject/Prefab."
         Effects.clip = DeathSound[Random.Range(0, DeathSound.Length)];
         // "Sound effects will clip over each other."
-        Effects.PlayOneShot(Effects.clip, 0.7F);
+        Effects.PlayOneShot(Effects.clip, 1F);
     }
 
     public void AltPlayAudio() {
         Effects.clip = GroundSound[Random.Range(0, GroundSound.Length)];
-        Effects.PlayOneShot(Effects.clip, 0.7F);
+        Effects.PlayOneShot(Effects.clip, 1F);
         Effects.maxDistance = 4;
     }
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Play : MonoBehaviour {
+public class Buttons : MonoBehaviour {
     private Animator anim;
 
     // Start is called before the first frame update
@@ -30,6 +30,24 @@ public class Play : MonoBehaviour {
 
             case "HardMode":
                 SceneManager.LoadScene("Hard");
+                break;
+
+            // "There are buttons that will give away which scene you go to."
+            // "'MainMenu' can also be found within the 'SpawnBat' script."
+            case "HomeButton":
+                SceneManager.LoadScene("MainMenu");
+                break;
+                
+            case "PlayButton":
+                SceneManager.LoadScene("SelectionScreen");
+                break;
+            
+            case "PracticeButton":
+                SceneManager.LoadScene("Practice");
+                break;
+            
+            case "CreditsButton":
+                SceneManager.LoadScene("Credits");
                 break;
 
             default:
