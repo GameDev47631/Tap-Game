@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1246533127}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpawnBat, Assembly-CSharp
         m_MethodName: MenuScene
         m_Mode: 1

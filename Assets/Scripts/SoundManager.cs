@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour {
     
     // "Array for more than one sound effect."
     public AudioClip[] DeathSound;
-    public AudioClip GroundSound;
+    public AudioClip[] GroundSound;
     int isSound;
     public Sprite soundOnImage, soundOffImage;
     public Button SoundButton;
@@ -44,7 +44,8 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void AltPlayAudio() {
-        Effects.PlayOneShot(GroundSound, 0.7F);
+        Effects.clip = GroundSound[Random.Range(0, GroundSound.Length)];
+        Effects.PlayOneShot(Effects.clip, 0.7F);
         Effects.maxDistance = 4;
     }
 
