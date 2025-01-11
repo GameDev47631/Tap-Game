@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
+    // "Some scenes will share and continue the same music track."
     [SerializeField] AudioSource Music, Effects;
+    public static SoundManager Instance;
     
-    // "Array for more than one sound effect."
+    // "Have an array ready for more "randomized" sound effects."
     public AudioClip[] DeathSound, GroundSound;
     int isSound;
     public Sprite soundOnImage, soundOffImage;

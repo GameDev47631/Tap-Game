@@ -685,7 +685,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 235}
+  m_SizeDelta: {x: 420, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250635670
 MonoBehaviour:
@@ -711,10 +711,12 @@ MonoBehaviour:
     Unknown_Chan\n    - SMALL BAT: tbbk\n    - PURPLE BAT: Evert (Direct Source:
     bagzie)\n\u2022 VISUAL EFFECTS: Cartoon FX Remaster (Unity Asset Store)\n\u2022
     BUTTON UI\n    - Game GUI Volume 1 (Unity Asset Store)\n    - Kenney (pasued
-    banner only)\n\u2022 AUDIO\n    - MUSIC: Mystery Forest (by Alexandr Zhelanov)\n   
-    - SOUND EFFECTS\n        * BATS: AntumDeluge (Direct Source: polymorpheva)\n       
-    * WING FLAP: Fast Simple Chop 5 (by dave.des)\n        * GRASS: Lamoot (Direct
-    Source: Yo Frankie! - Blender Foundation)\n        * \"CARTOONISH\": copyc4t"
+    banner only)\n\u2022 AUDIO\n    - MUSIC\n        * TITLE SCREEN: Beau Buckley\n       
+    * PRACTICE: TinyWorlds\n        * EASY: hectavex\n        * MEDIUM: cynicmusic\n       
+    * HARD: Alexandr Zhelanov\n    - SOUND EFFECTS\n        * BATS: AntumDeluge (Direct
+    Source: polymorpheva)\n        * WING FLAP: Fast Simple Chop 5 (by dave.des)\n       
+    * GRASS: Lamoot (Direct Source: Yo Frankie! - Blender Foundation)\n        *
+    \"CARTOONISH\": copyc4t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -741,8 +743,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

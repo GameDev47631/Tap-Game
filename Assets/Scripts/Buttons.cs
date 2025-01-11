@@ -32,9 +32,10 @@ public class Buttons : MonoBehaviour {
                 SceneManager.LoadScene("Hard");
                 break;
 
-            // "There are buttons that will give away which scene you go to."
+            // "The in-game buttons will give away which scene you go to."
             // "'MainMenu' can also be found within the 'SpawnBat' script."
             case "HomeButton":
+            case "ExitButton":
                 SceneManager.LoadScene("MainMenu");
                 break;
                 
