@@ -9,5 +9,5 @@ This is simply a small 2-Dimensional game based off of A. E. Colonna's "Code Gam
 ## Additional Resources
 - https://opengameart.org/
 
-## Example
+## Preliminary Example (Outdated)
 ![Tap Game](https://github.com/user-attachments/assets/5097373d-cf76-4991-9858-63727cae87e3)
