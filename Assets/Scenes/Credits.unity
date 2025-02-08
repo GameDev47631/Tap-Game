@@ -232,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 300, y: 75}
+  m_AnchoredPosition: {x: 0, y: -35}
+  m_SizeDelta: {x: 300, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931295338
 MonoBehaviour:
@@ -684,8 +684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 420, y: 235}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 420, y: 265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250635670
 MonoBehaviour:
@@ -707,9 +707,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u2022 BACKGROUNDS: Forest (by Cethiel)\n\u2022 SPRITES\n    - BLUE BAT:
-    Unknown_Chan\n    - SMALL BAT: tbbk\n    - PURPLE BAT: Evert (Direct Source:
-    bagzie)\n\u2022 VISUAL EFFECTS: Cartoon FX Remaster (Unity Asset Store)\n\u2022
+  m_text: "\u2022 BACKGROUNDS: Forest (by Cethiel; edited)\n\u2022 SPRITES\n    -
+    BLUE BAT: Unknown_Chan\n    - SMALL BAT: tbbk\n    - PURPLE BAT: Evert (Direct
+    Source: bagzie)\n\u2022 VISUAL EFFECTS: Cartoon FX Remaster (Unity Asset Store)\n\u2022
     BUTTON UI\n    - Game GUI Volume 1 (Unity Asset Store)\n    - Kenney (pasued
     banner only)\n\u2022 AUDIO\n    - MUSIC\n        * TITLE SCREEN: Beau Buckley\n       
     * PRACTICE: TinyWorlds\n        * EASY: hectavex\n        * MEDIUM: cynicmusic\n       
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -22.9915, z: -0.0000000042078208, w: 0.000034345623}
+  m_margin: {x: 0, y: -1.4141312, z: -0.0000000042078208, w: 0.000034345623}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
