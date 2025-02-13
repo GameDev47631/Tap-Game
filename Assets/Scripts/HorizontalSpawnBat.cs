@@ -38,8 +38,8 @@ public class HorizontalSpawnBat : MonoBehaviour {
         while (isPaused == 0) {
             yield return new WaitForSeconds(Random.Range(7f, 10f));
 
-            var horizontal = Random.Range(-20, 20);
-            var vertical = Random.Range(-20, 20);
+            var horizontal = Random.Range(0, 20);
+            var vertical = Random.Range(0, 20);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
 
@@ -69,8 +69,8 @@ public class HorizontalSpawnBat : MonoBehaviour {
         while (isPaused == 0) {
             yield return new WaitForSeconds(Random.Range(7f, 10f));
 
-            var horizontal = Random.Range(-20, 20);
-            var vertical = Random.Range(-20, 20);
+            var horizontal = Random.Range(-20, 0);
+            var vertical = Random.Range(-20, 0);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
 
