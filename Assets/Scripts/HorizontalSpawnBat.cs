@@ -22,6 +22,8 @@ public class HorizontalSpawnBat : MonoBehaviour {
         // "Score still increments in regards to Unity, not the 'SpawnBat' script."
         totalScore = PlayerPrefs.GetInt("Score", 0);
 
+        UpdateScoreText();
+        
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();
         
@@ -36,18 +38,17 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator LeftFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(Random.Range(7f, 10f));
+            yield return new WaitForSeconds(Random.Range(5f, 8f));
 
-            var horizontal = Random.Range(0, 20);
-            var vertical = Random.Range(0, 20);
+            var horizontal = Random.Range(-30, 30);
+            var vertical = Random.Range(-20, 20);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
 
-            // Apply movement to the bat using Rigidbody2D.
+            // "Apply movement to the bat using Rigidbody2D."
             Rigidbody2D rigidbody = newBat.GetComponent<Rigidbody2D>();
             if (rigidbody != null) {
-                Vector2 direction = Vector2.left;
-                rigidbody.velocity = direction * 9f;
+                rigidbody.velocity = Vector2.left * 20f;
             }
 
             Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
@@ -67,18 +68,17 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator RightFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(Random.Range(7f, 10f));
+            yield return new WaitForSeconds(Random.Range(5f, 8f));
 
-            var horizontal = Random.Range(-20, 0);
-            var vertical = Random.Range(-20, 0);
+            var horizontal = Random.Range(-30, 30);
+            var vertical = Random.Range(-20, 20);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
 
             // "This is meant for the horizontal prefabs only."
             Rigidbody2D rigidbody = newBat.GetComponent<Rigidbody2D>();
             if (rigidbody != null) {
-                Vector2 direction = Vector2.right;
-                rigidbody.velocity = direction * 9f;
+                rigidbody.velocity = Vector2.right * 20f;
             }
 
             Collider2D newBatCollider = newBat.GetComponent<Collider2D>();

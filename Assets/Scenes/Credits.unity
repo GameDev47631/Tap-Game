@@ -885,8 +885,9 @@ MonoBehaviour:
     * TITLE SCREEN: Beau Buckley\n        * PRACTICE: TinyWorlds\n        * EASY:
     hectavex\n        * MEDIUM: cynicmusic\n        * HARD: Alexandr Zhelanov\n   
     - SOUND EFFECTS\n        * BATS: AntumDeluge (Direct Source: polymorpheva)\n       
-    * WING FLAP: Fast Simple Chop 5 (by dave.des)\n        * GRASS: Lamoot (Direct
-    Source: Yo Frankie! - Blender Foundation)\n        * \"CARTOONISH\": copyc4t"
+    * WING FLAP: Fast Simple Chop 5 (by dave.des)\n        * GRASS: Lamoot\n           
+    ** Direct Source: Yo Frankie! - Blender Foundation\n        * \"CARTOONISH\":
+    copyc4t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
