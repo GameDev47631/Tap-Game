@@ -25,7 +25,7 @@ public class SpawnBat : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        // "Score increments by 1 after every click; 'totalscore++'."
+        // "Score increments after every click."
         totalScore = PlayerPrefs.GetInt("Score", 0);
         
         // "More inforation down below."
@@ -113,7 +113,7 @@ public class SpawnBat : MonoBehaviour {
             scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
-            scoreText.text = "Score: " + totalScore.ToString();
+            scoreText.text = "Score\n" + totalScore.ToString();
         }
     }
 
