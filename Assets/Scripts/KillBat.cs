@@ -20,6 +20,9 @@ public class KillBat : MonoBehaviour {
 
     void OnMouseDown() {
         totalScore = PlayerPrefs.GetInt("Score", 0);
+        /* totalScore++; */
+
+        // "Arcade games usually added 100 points to make the score more appealing."
         totalScore += 100;
 
         // "'SoundManager' script; line #33."

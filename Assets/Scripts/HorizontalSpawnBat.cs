@@ -40,8 +40,8 @@ public class HorizontalSpawnBat : MonoBehaviour {
         while (isPaused == 0) {
             yield return new WaitForSeconds(Random.Range(5f, 8f));
 
-            var horizontal = Random.Range(-30, 30);
-            var vertical = Random.Range(-20, 20);
+            var horizontal = Random.Range(-10, 10);
+            var vertical = Random.Range(-10, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabA[Random.Range(0, BatPrefabA.Length)], spawnPosition, Quaternion.identity);
 
@@ -68,10 +68,10 @@ public class HorizontalSpawnBat : MonoBehaviour {
 
     IEnumerator RightFacingBat() {
         while (isPaused == 0) {
-            yield return new WaitForSeconds(Random.Range(5f, 8f));
+            yield return new WaitForSeconds(Random.Range(7f, 12f));
 
-            var horizontal = Random.Range(-30, 30);
-            var vertical = Random.Range(-20, 20);
+            var horizontal = Random.Range(-10, 10);
+            var vertical = Random.Range(-10, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefabB[Random.Range(0, BatPrefabB.Length)], spawnPosition, Quaternion.identity);
 
@@ -122,13 +122,15 @@ public class HorizontalSpawnBat : MonoBehaviour {
         }
     }
 
-    private void UpdateScoreText() {
+    protected void UpdateScoreText() {
         if (SceneManager.GetActiveScene().name == "GameOver") {
             // "The score text will change in the 'GameOver' screen."
-            scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
+            scoreText.text = "Your Score: " + totalScore.ToString() +
+                             "\nHigh Score: " + totalScore.ToString() +
+                             "\n\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
-            scoreText.text = "Caught: " + totalScore.ToString();
+            scoreText.text = "Score\n" + totalScore.ToString();
         }
     }
 

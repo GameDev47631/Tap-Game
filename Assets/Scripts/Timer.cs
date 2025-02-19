@@ -51,7 +51,7 @@ public class Timer : SpawnBat {
         int minutes = Mathf.FloorToInt(currentTime % 3600 / 60);
         int seconds = Mathf.FloorToInt(currentTime % 60);
         int centiseconds = Mathf.FloorToInt(currentTime % 1 * 100);
-        timerText.text = $"{minutes:00}:{seconds:00}:{centiseconds:00}";
+        timerText.text = $"Time\n{minutes:00}:{seconds:00}:{centiseconds:00}";
     }
 }
 

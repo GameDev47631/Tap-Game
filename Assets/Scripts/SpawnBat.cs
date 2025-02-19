@@ -110,7 +110,9 @@ public class SpawnBat : MonoBehaviour {
     protected void UpdateScoreText() {
         if (SceneManager.GetActiveScene().name == "GameOver") {
             // "The score text will change in the 'GameOver' screen."
-            scoreText.text = "Your Score: " + totalScore.ToString() + "\nPlay Again?";
+            scoreText.text = "Your Score: " + totalScore.ToString() +
+                             "\nHigh Score: " + totalScore.ToString() +
+                             "\n\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
             scoreText.text = "Score\n" + totalScore.ToString();
