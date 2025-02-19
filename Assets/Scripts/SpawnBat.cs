@@ -10,6 +10,7 @@ public class SpawnBat : MonoBehaviour {
     // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
     public int totalScore, isPaused;
+    private const int MAX_SCORE = 1000;
     
     // "A pause button is required to see these."
     public GameObject darkScreen, frame;
@@ -33,6 +34,8 @@ public class SpawnBat : MonoBehaviour {
 
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();
+
+        scoreText.text = (totalScore >= MAX_SCORE) ? "Score\nMAX" : "Score\n" + totalScore;
         
         if (isPaused == 1) {
             gameObjects = GameObject.FindGameObjectsWithTag("Bat");

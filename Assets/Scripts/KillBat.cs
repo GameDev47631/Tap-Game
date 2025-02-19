@@ -6,6 +6,9 @@ public class KillBat : MonoBehaviour {
 
     public int totalScore, soundIndex;
 
+    // "A player's score can not be infinite! Have a reasonable limit ready!"
+    private const int MAX_SCORE = 1000;
+
     SoundManager soundManager;
 
     // Start is called before the first frame update
@@ -31,8 +34,13 @@ public class KillBat : MonoBehaviour {
         PlayerPrefs.SetInt("Score", totalScore);
         PlayerPrefs.Save();
 
-        Debug.Log("Score: " + totalScore);
-
+        if (totalScore >= MAX_SCORE) {
+            totalScore = MAX_SCORE;
+            Debug.Log("Score: MAX");
+        } else {
+            Debug.Log("Score: " + totalScore);
+        }
+        
         Destroy(gameObject);
         // "Click the bat(s) to see the effects."
         Instantiate(DeathEffect, transform.position, Quaternion.identity);
