@@ -7,7 +7,7 @@ public class KillBat : MonoBehaviour {
     public int totalScore, soundIndex;
 
     // "A player's score can not be infinite! Have a reasonable limit ready!"
-    private const int MAX_SCORE = 1000;
+    private const int MAX_SCORE = 999000;
 
     SoundManager soundManager;
 
