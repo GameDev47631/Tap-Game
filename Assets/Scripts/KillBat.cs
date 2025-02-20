@@ -1,8 +1,7 @@
 using UnityEngine;
 
 public class KillBat : MonoBehaviour {
-    [SerializeField] GameObject DeathEffect;
-    [SerializeField] GameObject GroundEffect;
+    [SerializeField] GameObject DeathEffect, GroundEffect;
 
     public int totalScore, soundIndex;
 
@@ -42,14 +41,14 @@ public class KillBat : MonoBehaviour {
         }
         
         Destroy(gameObject);
-        // "Click the bat(s) to see the effects."
+        // "Click the bat when it appears to see the effect."
         Instantiate(DeathEffect, transform.position, Quaternion.identity);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Ground") {
             Destroy(gameObject);
-            // "Missing each bat will be displayed."
+            // "Missing each bat will display a different effect."
             Instantiate(GroundEffect, transform.position, Quaternion.identity);
             soundManager.AltPlayAudio();
         }

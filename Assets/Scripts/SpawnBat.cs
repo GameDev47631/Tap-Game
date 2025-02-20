@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SpawnBat : MonoBehaviour {
     // "Create empty GameObjects for Prefabs."
-    [SerializeField] GameObject[] BatPrefab, gameObjects;
+    [SerializeField] GameObject[] prefabs, gameObjects;
     
     // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
@@ -47,8 +47,7 @@ public class SpawnBat : MonoBehaviour {
     IEnumerator SpawningBat() {
         while (isPaused == 0) {
             yield return new WaitForSeconds(Random.Range(0.5f, 2f));
-            /* https://blog.sentry.io/unity-tutorial-developing-your-first-unity-game-part-2/
-            "I could not work this code out."
+            /* "I could not work this code out."
             float posY = Random.Range
                 (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y,
                 Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
@@ -63,9 +62,9 @@ public class SpawnBat : MonoBehaviour {
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
-            GameObject newBat = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
+            GameObject newBat = Instantiate(prefabs[Random.Range(0, prefabs.Length)], spawnPosition, Quaternion.identity);
 
-            // "This will prevent collision between the prefabs themselves."
+            // "This will prevent collision between the Prefabs themselves."
             Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
             if (newBatCollider != null) {
                 GameObject[] existingBats = GameObject.FindGameObjectsWithTag("Bat");

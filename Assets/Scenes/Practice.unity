@@ -2682,10 +2682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatPrefab:
+  prefabs:
   - {fileID: 766885859834459676, guid: be2e02c3ff7828846b69c5cd2bea56a3, type: 3}
-  - {fileID: 5283665886305136601, guid: 1b978126da873594b927285799203964, type: 3}
   - {fileID: 352626851056742821, guid: 2eecc3cb6d5805c4183e2e33cb6a220a, type: 3}
+  - {fileID: 5283665886305136601, guid: 1b978126da873594b927285799203964, type: 3}
   gameObjects: []
   scoreText: {fileID: 1776263411}
   totalScore: 0
