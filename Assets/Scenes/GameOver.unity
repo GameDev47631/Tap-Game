@@ -993,7 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BatPrefab:
+  prefabs:
   - {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
   gameObjects: []
   scoreText: {fileID: 1250635670}
