@@ -975,7 +975,7 @@ Transform:
   m_GameObject: {fileID: 1246533123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -993,11 +993,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366d29381263bfd4187144cf29d5735f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
+  BatPrefab:
   - {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
+  - {fileID: 1978689737715041617, guid: afa54037ffe627545886e2741abb365d, type: 3}
+  - {fileID: 1978689737715041617, guid: afa54037ffe627545886e2741abb365d, type: 3}
   gameObjects: []
   scoreText: {fileID: 1250635670}
   totalScore: 0
+  highScore: 0
   isPaused: 0
   darkScreen: {fileID: 0}
   frame: {fileID: 0}
@@ -1036,7 +1039,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 325, y: 115}
+  m_SizeDelta: {x: 325, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250635670
 MonoBehaviour:
@@ -1059,9 +1062,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'Your Score: 000000
-
-    High Score: 999000
-
 
     Play Again?'
   m_isRightToLeft: 0

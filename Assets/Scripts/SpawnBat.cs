@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SpawnBat : MonoBehaviour {
     // "Create empty GameObjects for Prefabs."
-    [SerializeField] GameObject[] prefabs, gameObjects;
+    [SerializeField] GameObject[] BatPrefab, gameObjects;
     
     // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
-    public int totalScore, isPaused;
+    public int totalScore, highScore, isPaused;
     private const int MAX_SCORE = 999000;
     
     // "A pause button is required to see these."
@@ -62,7 +62,7 @@ public class SpawnBat : MonoBehaviour {
             var horizontal = Random.Range(-20, 20);
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
-            GameObject newBat = Instantiate(prefabs[Random.Range(0, prefabs.Length)], spawnPosition, Quaternion.identity);
+            GameObject newBat = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
 
             // "This will prevent collision between the Prefabs themselves."
             Collider2D newBatCollider = newBat.GetComponent<Collider2D>();
@@ -111,8 +111,7 @@ public class SpawnBat : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "GameOver") {
             // "The score text will change in the 'GameOver' screen."
             scoreText.text = "Your Score: " + totalScore.ToString() +
-                             "\nHigh Score: " + totalScore.ToString() +
-                             "\n\nPlay Again?";
+                             "\nPlay Again?";
         } else {
             // "This is the default score text for in-game."
             scoreText.text = (totalScore >= MAX_SCORE) ? "Score\nMAX" : "Score\n" + totalScore.ToString();
