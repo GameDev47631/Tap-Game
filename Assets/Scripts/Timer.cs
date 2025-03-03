@@ -2,7 +2,7 @@ using TMPro; // https://www.youtube.com/watch?v=u_n3NEi223E
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Timer : SpawnBat {
+public class GameTimer : SpawnBat {
     [Header("Component")]
     public TextMeshProUGUI timerText;
 
