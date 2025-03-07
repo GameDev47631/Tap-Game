@@ -896,14 +896,15 @@ MonoBehaviour:
   m_text: "\u2022 BACKGROUNDS: Forest (by Cethiel; edited)\n\u2022 SPRITES\n    -
     BLUE BAT: Unknown_Chan\n    - SMALL BAT: tbbk\n    - PURPLE BAT: Evert (Direct
     Source: bagzie)\n\u2022 VISUAL EFFECTS\n    - Cartoon FX Remaster (Unity Asset
-    Store)\n\u2022 TEXT EFFECTS: LeiQiaoZhi\n\u2022 BUTTON UI\n    - Game GUI Volume
-    1 (Unity Asset Store)\n    - Kenney (pasued banner only)\n\u2022 AUDIO\n    -
-    MUSIC\n        * TITLE SCREEN: Beau Buckley\n        * PRACTICE: TinyWorlds\n       
-    * EASY: hectavex\n        * MEDIUM: cynicmusic\n        * HARD: Alexandr Zhelanov\n   
-    - SOUND EFFECTS\n        * BATS: AntumDeluge (Direct Source: polymorpheva)\n       
-    * WING FLAP: Fast Simple Chop 5 (by dave.des)\n        * GRASS: Lamoot\n           
-    ** Direct Source: Yo Frankie! - Blender Foundation\n        * RAIN: Kresiek The
-    Furry\n        * \"CARTOONISH\": copyc4t"
+    Store)\n    - Timers Made Easy Lite (Unity Asset Store)\n\u2022 TEXT EFFECTS:
+    LeiQiaoZhi\n\u2022 BUTTON UI\n    - Game GUI Volume 1 (Unity Asset Store)\n   
+    - Kenney (pasued banner only)\n\u2022 AUDIO\n    - MUSIC\n        * TITLE SCREEN:
+    Beau Buckley\n        * PRACTICE: TinyWorlds\n        * EASY: hectavex\n       
+    * MEDIUM: cynicmusic\n        * HARD: Alexandr Zhelanov\n    - SOUND EFFECTS\n       
+    * BATS: AntumDeluge (Direct Source: polymorpheva)\n        * WING FLAP: Fast
+    Simple Chop 5 (by dave.des)\n        * GRASS: Lamoot\n            ** Direct Source:
+    Yo Frankie! - Blender Foundation\n        * RAIN: Kresiek The Furry\n       
+    * \"CARTOONISH\": copyc4t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}

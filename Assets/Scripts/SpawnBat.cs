@@ -9,7 +9,7 @@ public class SpawnBat : MonoBehaviour {
     
     // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
-    public int totalScore, highScore, isPaused;
+    public int totalScore, isPaused;
     private const int MAX_SCORE = 999000;
     
     // "A pause button is required to see these."
