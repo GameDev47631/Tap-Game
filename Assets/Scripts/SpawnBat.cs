@@ -121,5 +121,6 @@ public class SpawnBat : MonoBehaviour {
     public void MenuScene() {
         // "Check the 'Play' script for more."
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }
