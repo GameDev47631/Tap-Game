@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 190353016}
   - component: {fileID: 190353020}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1335,7 @@ GameObject:
   - component: {fileID: 1582066249}
   - component: {fileID: 1582066248}
   m_Layer: 5
-  m_Name: HelpButton
+  m_Name: PracticeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
