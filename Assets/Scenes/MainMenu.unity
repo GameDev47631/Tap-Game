@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 190353016}
   - component: {fileID: 190353020}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -60, y: 75}
+  m_AnchoredPosition: {x: -60, y: 65}
   m_SizeDelta: {x: 2.4, y: 2.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &190353016
@@ -687,7 +687,6 @@ GameObject:
   - component: {fileID: 931295337}
   - component: {fileID: 931295339}
   - component: {fileID: 931295338}
-  - component: {fileID: 931295340}
   - component: {fileID: 931295342}
   - component: {fileID: 931295341}
   m_Layer: 5
@@ -771,7 +770,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -815,30 +814,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931295336}
   m_CullTransparentMesh: 1
---- !u!114 &931295340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931295336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9840f87219df84505803024c796e739d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 931295338}
-  usePreset: 0
-  preset: {fileID: 0}
-  tagEffects: []
-  globalEffects:
-  - triggerWhen: 0
-    effect: {fileID: 11400000, guid: ea578c2b1d1db41e18bdf65378511f7a, type: 2}
-    onEffectCompleted:
-      m_PersistentCalls:
-        m_Calls: []
-    overrideTagEffects: 0
-  updatesPerSecond: 30
 --- !u!114 &931295341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1209,7 +1184,7 @@ GameObject:
   - component: {fileID: 1507511018}
   - component: {fileID: 1507511017}
   m_Layer: 5
-  m_Name: PlayText
+  m_Name: StartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,7 +1335,7 @@ GameObject:
   - component: {fileID: 1582066249}
   - component: {fileID: 1582066248}
   m_Layer: 5
-  m_Name: PracticeButton
+  m_Name: HelpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1383,7 +1358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 60, y: 75}
+  m_AnchoredPosition: {x: 60, y: 65}
   m_SizeDelta: {x: 2.4, y: 2.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582066248
@@ -1527,7 +1502,7 @@ GameObject:
   - component: {fileID: 1614161115}
   - component: {fileID: 1614161112}
   m_Layer: 5
-  m_Name: PracticeText
+  m_Name: HelpText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

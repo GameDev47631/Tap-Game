@@ -7,7 +7,7 @@ public class SpawnBat : MonoBehaviour {
     // "Create empty GameObjects for Prefabs."
     [SerializeField] GameObject[] BatPrefab, gameObjects;
     
-    // "'Timer' inherits from 'SpawnBat', but needs to access 'scoreText'."
+    // "'GameTimer' inherits from 'SpawnBat', but needs to access 'scoreText'."
     [SerializeField] protected TextMeshProUGUI scoreText;
     public int totalScore, isPaused;
     private const int MAX_SCORE = 999000;
