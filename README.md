@@ -1,5 +1,5 @@
 # Tap Game
-This is simply a small 2-Dimensional game based off of A. E. Colonna's "Code Gamers Development: Essentials".
+A short 2D game based on A. E. Colonna's "Code Gamers Development: Essentials".
 
 ## Instructions
 - https://blog.sentry.io/unity-tutorial-developing-your-first-unity-game-part-1/
