@@ -18,8 +18,8 @@ public class StageMenu : MonoBehaviour {
         }
     }
 
-    public void UnlockStage(int harder) {
-        string stageName = "Stage" + harder;
+    public void UnlockStage(string mode) {
+        string stageName = mode;
         SceneManager.LoadScene(stageName);
     }
 }
