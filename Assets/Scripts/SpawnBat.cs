@@ -59,7 +59,7 @@ public class SpawnBat : MonoBehaviour {
 
             /* https://www.youtube.com/watch?v=j6p5Nh7JvmY
             "The bats will appear from within the screen." */
-            var horizontal = Random.Range(-20, 20);
+            var horizontal = Random.Range(-19, 19);
             var vertical = Random.Range(0, 10);
             var spawnPosition = new Vector2(horizontal, vertical);
             GameObject newBat = Instantiate(BatPrefab[Random.Range(0, BatPrefab.Length)], spawnPosition, Quaternion.identity);
