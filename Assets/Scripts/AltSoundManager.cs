@@ -19,12 +19,13 @@ public class AltSoundManager : MonoBehaviour {
         } else {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
     }
 
     // Update is called once per frame
     void Update() {
-        // "I couldn't find a way to simplify this part."
+        /* "I could not simplify this part at the time."
         if (SceneManager.GetActiveScene().name == "Practice") {
             AltSoundManager.Instance.GetComponent<AudioSource>().Pause();
         } else if (SceneManager.GetActiveScene().name == "Easy") {
@@ -33,9 +34,20 @@ public class AltSoundManager : MonoBehaviour {
             AltSoundManager.Instance.GetComponent<AudioSource>().Pause();
         } else if (SceneManager.GetActiveScene().name == "Hard") {
             AltSoundManager.Instance.GetComponent<AudioSource>().Pause();
-        }
+        } */
     }
 
+    // "This is [a] more simplified version."
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        string[] pauseScenes = {"Practice", "Easy", "Medium", "Hard", "GameOver"};
+        
+        if (System.Array.Exists(pauseScenes, s => s == scene.name)) {
+            Music.Pause();
+        } else {
+            PlayAudio();
+        }
+    }
+    
     public void PlayAudio() {
         isSound = PlayerPrefs.GetInt("Sound", 1);
 
