@@ -42,7 +42,7 @@ public class AltSoundManager : MonoBehaviour {
         string[] pauseScenes = {"Practice", "Easy", "Medium", "Hard", "GameOver"};
         
         if (System.Array.Exists(pauseScenes, s => s == scene.name)) {
-            Music.Pause();
+            Music.Stop();
         } else {
             PlayAudio();
         }
